@@ -15,7 +15,7 @@ Trip Planner is a full-stack web application that helps users plan trips efficie
 # Tech Stack
 
 # Frontend:
-- React.js
+- React.js (jsx)
 - CSS, JavaScript
 - Axios
 
