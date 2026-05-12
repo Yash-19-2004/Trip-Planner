@@ -1,0 +1,323 @@
+body {
+
+  margin: 0;
+
+  font-family: Arial;
+
+  background: linear-gradient(
+    135deg,
+    #4facfe,
+    #00f2fe,
+    #43e97b
+  );
+
+  background-size: 400% 400%;
+
+  animation: bg 10s infinite;
+
+}
+
+
+@keyframes bg {
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+
+}
+
+
+.header {
+
+  text-align: center;
+
+  padding: 20px;
+
+  font-size: 28px;
+
+  font-weight: bold;
+
+  color: white;
+
+  background: rgba(0,0,0,0.4);
+
+  letter-spacing: 1px;
+
+}
+
+
+.hero {
+
+  text-align: center;
+
+  padding: 50px 20px;
+
+  color: white;
+
+}
+
+
+.hero h1 {
+
+  font-size: 45px;
+
+  margin-bottom: 10px;
+
+}
+
+
+.hero p {
+
+  font-size: 18px;
+
+}
+
+
+.stats {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+
+  padding: 20px;
+
+}
+
+
+.statCard {
+
+  background: white;
+
+  padding: 18px 30px;
+
+  border-radius: 15px;
+
+  font-weight: bold;
+
+  font-size: 18px;
+
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+
+  transition: 0.3s;
+
+}
+
+
+.statCard:hover {
+
+  transform: translateY(-5px);
+
+}
+
+
+.inputBox {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+
+  padding: 20px;
+
+}
+
+
+input {
+
+  padding: 14px;
+
+  width: 220px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  outline: none;
+
+  font-size: 15px;
+
+}
+
+
+button {
+
+  padding: 14px 18px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #0984e3;
+
+  color: white;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+}
+
+
+button:hover {
+
+  transform: scale(1.05);
+
+}
+
+
+.emptyCard {
+
+  width: 350px;
+
+  margin: auto;
+
+  margin-top: 30px;
+
+  background: rgba(255,255,255,0.8);
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+
+}
+
+
+.emptyCard h2 {
+
+  margin-top: 0;
+
+}
+
+
+.tripContainer {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 30px;
+
+  padding: 40px;
+
+}
+
+
+.tripCard {
+
+  width: 320px;
+
+  background: white;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+
+  transition: 0.3s;
+
+}
+
+
+.tripCard:hover {
+
+  transform: translateY(-10px);
+
+}
+
+
+.tripImage {
+
+  height: 200px;
+
+  background: linear-gradient(
+    135deg,
+    #00c6ff,
+    #0072ff
+  );
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 70px;
+
+  color: white;
+
+}
+
+
+.tripContent {
+
+  padding: 20px;
+
+}
+
+
+.tripContent h2 {
+
+  margin-top: 0;
+
+  color: #2d3436;
+
+}
+
+
+.tripContent p {
+
+  margin: 10px 0;
+
+  color: #555;
+
+}
+
+.tripContent button {
+
+  margin-right: 10px;
+
+  margin-top: 10px;
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .hero h1 {
+
+    font-size: 32px;
+
+  }
+
+  
+  .tripCard {
+
+    width: 90%;
+
+  }
+
+}
