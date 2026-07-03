@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
 
+const API_URL ="https://trip-planner-1-a7vt.onrender.com"
+
 function App() {
 
   const [place, setPlace] = useState("");
@@ -16,12 +18,12 @@ function App() {
   async function fetchData() {
 
     const tripData = await axios.get(
-      "http://localhost:5000/trips"
+      API_URL + "/trips"
     );
 
     const statsData = await axios.get(
-      "http://localhost:5000/stats"
-    );
+      API_URL + "/trip",
+        );
 
     setTrips(tripData.data);
 
@@ -44,8 +46,7 @@ function App() {
     }
 
     await axios.post(
-      "http://localhost:5000/trip",
-      {
+      API_URL + "/trip",      {
         place: place,
         budget: budget,
         member: member,
@@ -64,8 +65,7 @@ function App() {
   async function moveTrip(id, status) {
 
     await axios.put(
-      "http://localhost:5000/trip/" + id,
-      {
+      API_URL + "/trip/" + id,      {
         status: status
       }
     );
@@ -77,7 +77,7 @@ function App() {
   async function deleteTrip(id) {
 
     await axios.delete(
-      "http://localhost:5000/trip/" + id
+      API_URL + "/trip/" + id
     );
 
     fetchData();
