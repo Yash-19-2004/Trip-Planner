@@ -22,7 +22,7 @@ function App() {
     );
 
     const statsData = await axios.get(
-      API_URL + "/trip",
+      API_URL + "/stats"
         );
 
     setTrips(tripData.data);
