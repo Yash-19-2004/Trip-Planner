@@ -2,20 +2,17 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
+require("dotenv").config();
+
 const app = express();
 
 app.use(cors());
 
 app.use(express.json());
 
-
-
-mongoose.connect(
-  "mongodb://localhost:27017/tripDB"
-);
-
-
-
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB Connected"))
+  .catch((err) => console.log(err));
 
 const Trip = mongoose.model("Trip", {
 
@@ -132,14 +129,10 @@ app.get("/stats", async function (req, res) {
 
 });
 
+const PORT = process.env.PORT || 5000;
 
-
-
-app.listen(5000, function () {
-
-  console.log("Server Running On Port 5000");
-
+app.listen(PORT, () => {
+  console.log(`Server Running On Port ${PORT}`);
 });
-
 
 
